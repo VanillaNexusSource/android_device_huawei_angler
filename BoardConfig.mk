@@ -149,6 +149,9 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 #NFC
 NXP_CHIP_TYPE := 2
 
+# Ignore vendor partition audio_effects.conf and use the device (system/etc/) one
+TARGET_IGNORE_VENDOR_AUDIO_EFFECTS_CONF := true
+
 USE_CLANG_PLATFORM_BUILD := true
 
 -include vendor/huawei/angler/BoardConfigVendor.mk
