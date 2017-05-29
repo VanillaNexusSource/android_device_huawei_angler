@@ -33,8 +33,8 @@ ENABLE_CPUSETS := true
 
 # Inline kernel building
 TARGET_GCC_VERSION_ARM64 := 4.9
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linaro-linux-gnueabi-7.x/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linaro-linux-gnueabi-
 TARGET_KERNEL_SOURCE := kernel/huawei/angler
 TARGET_KERNEL_CONFIG := flash_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
@@ -44,7 +44,7 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.hardware=angler androidboot.console=ttyHSL0 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-7 no_console_suspend
+BOARD_KERNEL_CMDLINE := androidboot.hardware=angler androidboot.console=ttyHSL0 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-7 no_console_suspend
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
 BOARD_USES_ALSA_AUDIO := true
