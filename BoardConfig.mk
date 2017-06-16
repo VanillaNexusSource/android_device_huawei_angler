@@ -33,8 +33,8 @@ ENABLE_CPUSETS := true
 
 # Inline kernel building
 TARGET_GCC_VERSION_ARM64 := 4.9
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linaro-linux-gnueabi-7.x/bin
-KERNEL_TOOLCHAIN_PREFIX := aarch64-linaro-linux-gnueabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linaro-linux-gnu-7.x/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linaro-linux-gnu-
 TARGET_KERNEL_SOURCE := kernel/huawei/angler
 TARGET_KERNEL_CONFIG := flash_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
